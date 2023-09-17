@@ -1,12 +1,27 @@
 package com.expressimmigration.express.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.*;
+
 import java.util.Objects;
 
+@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+//@RequiredArgsConstructor
+@ToString
+@EqualsAndHashCode
+@Entity
 public class Client {
+    @Id
+    private Integer clientId;
     private String nom ;
     private String prenom;
     private String email;
-
+/*
     public Client() {
     }
 
@@ -60,6 +75,6 @@ public class Client {
                 ", prenom='" + prenom + '\'' +
                 ", email='" + email + '\'' +
                 '}';
-    }
+    }*/
 
 }
