@@ -1,0 +1,7 @@
+package com.expressimmigration.express.exceptions;
+
+public class ClientNotFoundException extends  Exception{
+    public ClientNotFoundException(String message) {
+        super(message);
+    }
+}

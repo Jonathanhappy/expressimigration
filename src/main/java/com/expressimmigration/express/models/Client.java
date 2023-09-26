@@ -1,26 +1,31 @@
 package com.expressimmigration.express.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.*;
 
 import java.util.Objects;
 
-@Data
+@Data // permet de tout generer
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-//@RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Entity
+@Entity // pour que client soit considerer par jpa comme une table dans la BD
 public class Client {
-    @Id
-    private Integer clientId;
+    @Id // pour dire que c'est un id
+    @GeneratedValue // auto generation de l'id
+    private Integer IdClient;
     private String nom ;
     private String prenom;
     private String email;
+
+
+
+
 /*
     public Client() {
     }
@@ -76,5 +81,4 @@ public class Client {
                 ", email='" + email + '\'' +
                 '}';
     }*/
-
 }
